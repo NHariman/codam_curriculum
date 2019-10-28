@@ -15,7 +15,7 @@ strchr
 strrchr
 strnstr
 strncmp
-atoi
+atoi		DONE
 isalpha
 isdigit
 isalnum
