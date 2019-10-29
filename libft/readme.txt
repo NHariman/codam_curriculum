@@ -16,10 +16,10 @@ strrchr
 strnstr
 strncmp
 atoi		DONE
-isalpha
-isdigit
-isalnum
-isascii
-isprint
+isalpha		DONE
+isdigit		DONE
+isalnum		DONE
+isascii		DONE
+isprint		DONE
 toupper
 tolower

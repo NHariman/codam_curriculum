@@ -6,11 +6,13 @@
 /*   By: nhariman <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/10/28 14:07:26 by nhariman       #+#    #+#                */
-/*   Updated: 2019/10/28 17:56:33 by nhariman      ########   odam.nl         */
+/*   Updated: 2019/10/29 16:48:30 by nhariman      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(const char *s)
+#include <libft.h>
+
+size_t	ft_strlen(const char *s)
 {
 	int i;
 	int length;
