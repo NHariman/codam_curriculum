@@ -21,5 +21,5 @@ isdigit		DONE
 isalnum		DONE
 isascii		DONE
 isprint		DONE
-toupper
-tolower
+toupper		DONE
+tolower		DONE
