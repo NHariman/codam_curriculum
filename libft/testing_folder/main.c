@@ -6,23 +6,13 @@
 /*   By: nhariman <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/10/28 16:39:10 by nhariman       #+#    #+#                */
-/*   Updated: 2019/10/30 20:21:17 by nhariman      ########   odam.nl         */
+/*   Updated: 2019/10/30 20:47:15 by nhariman      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include <stdlib.h>
 #include <assert.h>
-
-int	ft_atoi(const char *str);
-int ft_isalnum(int c);
-int ft_isalpha(int c);
-int ft_isascii(int c);
-int ft_isdigit(int c);
-int	ft_isprint(int c);
-int	ft_tolower(int c);
-int	ft_toupper(int c);
-size_t	ft_strlen(const char *s);
+#include "libft.h"
 
 int	main(void)
 {
@@ -62,14 +52,6 @@ int	main(void)
 	result = ft_strlen(s);
 	/* test ft_strlen */
 	printf("\nTesting ft_strlen, used word Codam\n %zu", result);
-
-	printf("using ft_isalpha: b, if true print 1: ");
-	int n;
-	n = ft_isalpha('b');
-	if (n == 1)
-		printf("1");
-	else
-		printf("0");
 
 	assert(ft_isalpha('a') == 1);
 	assert(ft_isascii('1') == 1);
