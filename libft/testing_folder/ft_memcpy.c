@@ -1,18 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_putchar_fd.c                                    :+:    :+:            */
+/*   ft_memcpy.c                                        :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: nhariman <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2019/10/30 20:56:33 by nhariman       #+#    #+#                */
-/*   Updated: 2019/10/31 18:57:20 by nhariman      ########   odam.nl         */
+/*   Created: 2019/10/31 17:54:48 by nhariman       #+#    #+#                */
+/*   Updated: 2019/10/31 18:33:31 by nhariman      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar_fd(char c, int fd)
+void	*memcpy(void *restrict dst, const void *restrict src, size_t n)
 {
-	write(fd, &c, 1);
+	unsigned char *dest;
+
+	dest = (unsigned char*)dst;
+	
+	return (dst);
 }

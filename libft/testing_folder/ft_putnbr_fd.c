@@ -6,7 +6,7 @@
 /*   By: nhariman <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/10/30 21:10:35 by nhariman       #+#    #+#                */
-/*   Updated: 2019/10/31 17:33:07 by nhariman      ########   odam.nl         */
+/*   Updated: 2019/10/31 19:02:03 by nhariman      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,6 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	if (fd > 2 || fd < 0)
-	{
-		ft_putendl_fd("Error: Please input a valid file descriptor", 1);
-		return (0);
-	}
 	if (n < 0)
 	{
 		ft_putchar_fd('-', fd);
