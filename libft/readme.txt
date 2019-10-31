@@ -1,8 +1,8 @@
 first project at codam
 to do list:
 THING		STATUS
-memset
-bzero
+memset		DONE
+bzero		DONE
 memcpy
 memccpy
 memmove
@@ -38,10 +38,10 @@ ft_strtrim
 ft_split
 ft_itoa
 ft_strmapi
-ft_putchar_fd
-ft_putstr_fd
-ft_putendl_fd
-ft_putnumbr_fd
+ft_putchar_fd		DONE
+ft_putstr_fd		DONE
+ft_putendl_fd		DONE
+ft_putnumbr_fd		DONE
 
 BONUS ROUNDS
 ft_lstnew
