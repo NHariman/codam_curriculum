@@ -3,9 +3,9 @@ to do list:
 THING		STATUS
 memset		DONE
 bzero		DONE
-memcpy
-memccpy
-memmove
+memcpy		DONE
+memccpy		DONE
+memmove		DONE
 memchr
 memcmp
 strlen		DONE

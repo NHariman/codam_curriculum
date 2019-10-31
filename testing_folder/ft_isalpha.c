@@ -1,33 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_memccpy.c                                       :+:    :+:            */
+/*   ft_isalpha.c                                       :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: nhariman <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2019/10/31 21:11:03 by nhariman       #+#    #+#                */
-/*   Updated: 2019/10/31 21:48:51 by nhariman      ########   odam.nl         */
+/*   Created: 2019/10/28 18:26:21 by nhariman       #+#    #+#                */
+/*   Updated: 2019/10/30 15:58:34 by nhariman      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	*memccpy(void *dst, const void *src, int c, size_t n)
+int	ft_isalpha(int c)
 {
-	while (n > 0)
-	{
-		if ((unsigned char)src == (unsigned char)c)
-		{
-			dst = dst++;
-			return (dst);
-		}
-		else
-		{
-			*((unsigned char *)dst) = *((unsigned char *)src);
-			dst++;
-			src++;
-			n--;
-		}
-	}
-	return (0);
+	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
+		return (1);
+	else
+		return (0);
 }

@@ -1,16 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   libft.h                                            :+:    :+:            */
+/*   ft_memchr.c                                        :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: nhariman <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2019/10/29 16:45:38 by nhariman      #+#    #+#                 */
-/*   Updated: 2019/10/29 16:50:07 by nhariman      ########   odam.nl         */
+/*   Created: 2019/10/31 21:51:26 by nhariman       #+#    #+#                */
+/*   Updated: 2019/10/31 22:08:51 by nhariman      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-#define LIBFT_H
+#include "libft.h"
 
-#include <stdlib.h>
+void	*memchr(const void *s, int c, size_t n)
+{
+	while (n > 0)
+	{
+		if (*((unsigned char *)s) == (unsigned char)c)
+			return (&s);
+		s++;
+		n--;
+	}
+	return (0);
+}
