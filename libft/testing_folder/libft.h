@@ -6,7 +6,7 @@
 /*   By: nhariman <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/10/29 16:45:38 by nhariman       #+#    #+#                */
-/*   Updated: 2019/10/31 18:38:41 by nhariman      ########   odam.nl         */
+/*   Updated: 2019/10/31 21:49:09 by nhariman      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,7 @@ void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_putchar(char c);
 void	ft_putstr(char *str);
-
+void	*memcpy(void *dst, const void *src, size_t n);
+void	*memccpy(void *dst, const void *src, int c, size_t n);
+void	*ft_memmove(void *dst, const void *src, size_t len);
 #endif

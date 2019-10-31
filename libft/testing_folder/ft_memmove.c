@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_memcpy.c                                        :+:    :+:            */
+/*   ft_memmove.c                                       :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: nhariman <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2019/10/31 17:54:48 by nhariman       #+#    #+#                */
-/*   Updated: 2019/10/31 21:05:26 by nhariman      ########   odam.nl         */
+/*   Created: 2019/10/31 21:40:49 by nhariman       #+#    #+#                */
+/*   Updated: 2019/10/31 21:45:48 by nhariman      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*memcpy(void *dst, const void *src, size_t n)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	while (n > 0)
+	while (len > 0)
 	{
 		*((unsigned char *)dst) = *((unsigned char *)src);
 		dst++;
 		src++;
-		n--;
+		len--;
 	}
 	return (dst);
 }
