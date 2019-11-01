@@ -6,7 +6,7 @@
 /*   By: nhariman <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/10/29 16:45:38 by nhariman       #+#    #+#                */
-/*   Updated: 2019/11/01 06:31:02 by nhariman      ########   odam.nl         */
+/*   Updated: 2019/11/01 21:11:04 by nhariman      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,4 +41,7 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n);
 char	*ft_strdup(const char *s1);
 void	*ft_calloc(size_t count, size_t size);
 char	*ft_strchr(const char *s, int c);
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
+char	*ft_truncate(char *dst);
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 #endif

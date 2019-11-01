@@ -9,12 +9,12 @@ memmove		DONE
 memchr		DONE
 memcmp		DONE
 strlen		DONE
-strlcpy
+strlcpy		DONE
 strlcat
 strchr		DONE
->strrchr
->strnstr
-strncmp
+strrchr		DONE
+strnstr		DONE
+strncmp		DONE
 atoi		DONE
 isalpha		DONE
 isdigit		DONE
