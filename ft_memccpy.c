@@ -6,20 +6,20 @@
 /*   By: nhariman <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/10/31 21:11:03 by nhariman       #+#    #+#                */
-/*   Updated: 2019/10/31 22:12:00 by nhariman      ########   odam.nl         */
+/*   Updated: 2019/11/01 00:25:09 by nhariman      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*memccpy(void *dst, const void *src, int c, size_t n)
+void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
 	while (n > 0)
 	{
 		if ((unsigned char)src == (unsigned char)c)
 		{
-			dst = dst++;
-			return (&dst);
+			dst++;
+			return (dst);
 		}
 		else
 		{

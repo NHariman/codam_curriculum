@@ -6,14 +6,14 @@ bzero		DONE
 memcpy		DONE
 memccpy		DONE
 memmove		DONE
-memchr
-memcmp
+memchr		DONE
+memcmp		DONE
 strlen		DONE
 strlcpy
 strlcat
-strchr
-strrchr
-strnstr
+strchr		DONE
+>strrchr
+>strnstr
 strncmp
 atoi		DONE
 isalpha		DONE
@@ -26,8 +26,8 @@ tolower		DONE
 
 WITH MALLOC
 THING		STATUS
-calloc
-strdup
+calloc		DONE
+strdup		DONE
 
 
 ADDITIONAL FUNCTIONS

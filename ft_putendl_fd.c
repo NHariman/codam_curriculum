@@ -6,7 +6,7 @@
 /*   By: nhariman <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/10/30 21:10:25 by nhariman       #+#    #+#                */
-/*   Updated: 2019/10/31 18:55:57 by nhariman      ########   odam.nl         */
+/*   Updated: 2019/11/01 02:26:07 by nhariman      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@
 void	ft_putendl_fd(char *s, int fd)
 {
 	ft_putstr_fd(s, fd);
-	write(fd, '\n', 1);
+	write(fd, "\n", 1);
 }
