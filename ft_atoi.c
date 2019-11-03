@@ -6,15 +6,15 @@
 /*   By: nhariman <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/10/28 15:55:47 by nhariman       #+#    #+#                */
-/*   Updated: 2019/10/28 17:38:04 by nhariman      ########   odam.nl         */
+/*   Updated: 2019/11/03 19:54:53 by nhariman      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_atoi(const char *str)
 {
 	int	number;
-	int negative;
-	int i;
+	int	negative;
+	int	i;
 
 	number = 0;
 	negative = 0;
@@ -22,9 +22,10 @@ int	ft_atoi(const char *str)
 	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n' ||
 	str[i] == '\v' || str[i] == '\f' || str[i] == '\r')
 		i++;
-	if (str[i] == '-')
+	if (str[i] == '-' || str[i] == '+')
 	{
-		negative = 1;
+		if (str[i] == '-')
+			negative = 1;
 		i++;
 	}
 	while (str[i] >= '0' && str[i] <= '9' && str[i] != '\0')
@@ -33,6 +34,6 @@ int	ft_atoi(const char *str)
 		i++;
 	}
 	if (negative != 0)
-		number = -number;
+		return (-number);
 	return (number);
 }

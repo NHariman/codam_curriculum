@@ -6,13 +6,14 @@
 /*   By: nhariman <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/10/28 18:26:21 by nhariman       #+#    #+#                */
-/*   Updated: 2019/10/30 20:21:50 by nhariman      ########   odam.nl         */
+/*   Updated: 2019/11/03 16:30:51 by nhariman      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isalnum(int c)
 {
-	if ((c >= '0' && c <= '9') || (c >= 'A' && c <= 'z'))
+	if ((c >= '0' && c <= '9') || (c >= 'A' && c <= 'Z') ||
+	(c >= 'a' && c <= 'z'))
 		return (1);
 	else
 		return (0);

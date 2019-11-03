@@ -6,13 +6,14 @@
 /*   By: nhariman <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/10/28 16:39:10 by nhariman       #+#    #+#                */
-/*   Updated: 2019/10/30 20:47:15 by nhariman      ########   odam.nl         */
+/*   Updated: 2019/11/03 16:04:32 by nhariman      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <assert.h>
 #include "libft.h"
+#include <string.h>
 
 int	main(void)
 {
@@ -38,7 +39,7 @@ int	main(void)
 	printf("\n   12:\n %d", ft_atoi(str4));
 	printf("\n           \n  \t -12:\n %d", ft_atoi(str5));
 	printf("\n a:\n %d", ft_atoi(str6));
-	
+
 	c = 'c';
 	printf("\ntoupper using 'c' -> %c", ft_toupper(c));
 	c = 'C';
@@ -50,14 +51,20 @@ int	main(void)
 	s = "Codam";
 	result = 0;
 	result = ft_strlen(s);
-	/* test ft_strlen */
 	printf("\nTesting ft_strlen, used word Codam\n %zu", result);
-
+	printf("\nCompare with actual strlen function used word Codam: %zu", strlen(s));
 	assert(ft_isalpha('a') == 1);
 	assert(ft_isascii('1') == 1);
 	assert(ft_isdigit('5') == 1);
 	assert(ft_isprint('5') == 1);
 	assert(ft_isalnum('5') == 1);
-	
+	printf("\ntesting ft_putchar_fd: 's'\n:");
+	ft_putchar_fd('s', 1);
+	printf("\ntesting ft_putstr_fd 'Codam':\n");
+	ft_putstr_fd("Codam", 1);
+	printf("testing ft_putendl_fd with 'Codam' newline expected\n");
+	ft_putendl_fd("Codam", 1);
+	printf("this should appear under codam, if not u failed lol");
+	printf("LOL");
 	return (0);
 }

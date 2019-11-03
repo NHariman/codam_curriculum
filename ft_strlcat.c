@@ -6,7 +6,7 @@
 /*   By: nhariman <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/01 18:52:39 by nhariman       #+#    #+#                */
-/*   Updated: 2019/11/01 21:12:25 by nhariman      ########   odam.nl         */
+/*   Updated: 2019/11/03 15:23:02 by nhariman      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,25 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
+	char	*source;
+	int		dstend;
+	int		maxappend;
+
+	source = (char *)src;
+	dstend = ft_strlen(dst) + 1;
+	maxappend = dstsize - ft_strlen(dst) - 1;
 	if (ft_strlen(src) >= dstsize)
 	{
 		dst = ft_truncate(dst);
-		return (dst);
+		return (ft_strlen(dst));
 	}
-	if (dstsize == 0)
+	else if (dstsize == 0)
 		return (0);
+	else if (dstend < maxappend)
+	{
+		*dst = dst[dstend];
+		ft_memcpy(dst, src, dstsize);
+		dst[dstsize - 1] = '\0';
+	}
+	return (ft_strlen(dst) + ft_strlen(source));
 }

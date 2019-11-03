@@ -1,28 +1,28 @@
 first project at codam
 to do list:
-THING		STATUS
-memset		DONE
-bzero		DONE
-memcpy		DONE
-memccpy		DONE
+THING		STATUS			TESTED?
+memset		DONE			YES
+bzero		DONE			YES
+memcpy		DONE			YES
+memccpy		DONE			YES
 memmove		DONE
-memchr		DONE
+memchr		DONE			YES
 memcmp		DONE
-strlen		DONE
+strlen		DONE			YES
 strlcpy		DONE
-strlcat
+strlcat		DONE
 strchr		DONE
 strrchr		DONE
 strnstr		DONE
 strncmp		DONE
-atoi		DONE
-isalpha		DONE
-isdigit		DONE
-isalnum		DONE
-isascii		DONE
-isprint		DONE
-toupper		DONE
-tolower		DONE
+atoi		DONE			EDGE CASES UNPROTECTED AAAAAA
+isalpha		DONE			YES
+isdigit		DONE			YES
+isalnum		DONE			YES
+isascii		DONE			YES
+isprint		DONE			YES
+toupper		DONE			YES
+tolower		DONE			YES
 
 WITH MALLOC
 THING		STATUS

@@ -6,7 +6,7 @@
 /*   By: nhariman <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/01 04:44:56 by nhariman       #+#    #+#                */
-/*   Updated: 2019/11/01 05:36:08 by nhariman      ########   odam.nl         */
+/*   Updated: 2019/11/03 15:15:27 by nhariman      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_strdup(const char *s1)
 		return (NULL);
 	while (len > 0)
 	{
-		str = s1;
+		str = (char *)s1;
 		str++;
 		s1++;
 		len--;
