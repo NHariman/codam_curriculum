@@ -5,9 +5,9 @@ memset		DONE			YES
 bzero		DONE			YES
 memcpy		DONE			YES
 memccpy		DONE			YES
-memmove		DONE
+memmove		DONE			YES
 memchr		DONE			YES
-memcmp		DONE
+memcmp		DONE			YES
 strlen		DONE			YES
 strlcpy		DONE
 strlcat		DONE
