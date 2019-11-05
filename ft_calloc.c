@@ -6,7 +6,7 @@
 /*   By: nhariman <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/01 05:00:23 by nhariman       #+#    #+#                */
-/*   Updated: 2019/11/03 20:55:47 by nhariman      ########   odam.nl         */
+/*   Updated: 2019/11/05 20:12:34 by nhariman      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,17 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	unsigned char	*mem;
-	size_t			i;
+	int			*mem;
+	size_t		i;
 
-	mem = (unsigned char *)malloc(size * count);
+	mem = (int *)malloc((count * size));
 	i = 0;
-	if (mem == 0)
-		return (0);
+	if (!mem)
+		return (NULL);
 	while (i < count)
 	{
-		*mem = '\0';
-		mem++;
+		mem[i] = 0;
 		i++;
 	}
-	return ((void *)mem);
+	return (mem);
 }

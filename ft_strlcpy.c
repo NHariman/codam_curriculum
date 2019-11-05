@@ -6,7 +6,7 @@
 /*   By: nhariman <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/01 18:50:54 by nhariman       #+#    #+#                */
-/*   Updated: 2019/11/03 15:17:24 by nhariman      ########   odam.nl         */
+/*   Updated: 2019/11/05 17:20:7 by nhariman      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,23 +24,23 @@ char	*ft_truncate(char *dst)
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	char	*source;
 	size_t	i;
 
-	source = (char *)src;
 	i = 0;
-	if (ft_strlen(dst) >= dstsize)
+	if (dst && src && dstsize > (size_t)ft_strlen(src))
 	{
-		dst = ft_truncate(dst);
-		return (ft_strlen(dst));
-	}
-	else if (ft_strlen(src) + 1 < dstsize)
-		ft_memcpy(dst, src, ft_strlen(source) + 1);
-	else if (dstsize != 0)
-	{
-		while (i < dstsize)
+		if ((size_t)ft_strlen(src) < dstsize)
+			ft_memcpy(dst, src, ft_strlen(src) + 1);
+		else if (dstsize != 0)
+		{
 			ft_memcpy(dst, src, dstsize - 1);
-		dst[dstsize - 1] = '\0';
+			dst[dstsize] = '\0';
+		}
+		return (ft_strlen(src));
 	}
-	return (ft_strlen(source));
+	else
+	{
+		ft_truncate((char *)src);
+		return (ft_strlen(src));
+	}
 }
