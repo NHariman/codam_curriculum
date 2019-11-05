@@ -11,11 +11,11 @@ memcmp		DONE			YES
 strlen		DONE			YES
 strlcpy		DONE
 strlcat		DONE
-strchr		DONE
-strrchr		DONE
+strchr		DONE			YES
+strrchr		DONE			YES
 strnstr		DONE
-strncmp		DONE
-atoi		DONE			EDGE CASES UNPROTECTED AAAAAA
+strncmp		DONE			YES
+atoi		DONE			YES
 isalpha		DONE			YES
 isdigit		DONE			YES
 isalnum		DONE			YES
@@ -26,22 +26,22 @@ tolower		DONE			YES
 
 WITH MALLOC
 THING		STATUS
-calloc		DONE
-strdup		DONE
+calloc		DONE			YES
+strdup		DONE			YES
 
 
 ADDITIONAL FUNCTIONS
-THING				STATUS
+THING				STATUS	TESTED?
 ft_substr
 ft_strjoin
 ft_strtrim
 ft_split
 ft_itoa
 ft_strmapi
-ft_putchar_fd		DONE
-ft_putstr_fd		DONE
-ft_putendl_fd		DONE
-ft_putnumbr_fd		DONE
+ft_putchar_fd		DONE	YES
+ft_putstr_fd		DONE	YES
+ft_putendl_fd		DONE	YES
+ft_putnumbr_fd		DONE	YES
 
 BONUS ROUNDS
 ft_lstnew
