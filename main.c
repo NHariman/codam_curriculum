@@ -6,7 +6,7 @@
 /*   By: nhariman <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/10/28 16:39:10 by nhariman       #+#    #+#                */
-/*   Updated: 2019/11/03 16:04:32 by nhariman      ########   odam.nl         */
+/*   Updated: 2019/11/07 13:54:29 by nhariman      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,9 @@ int	main(void)
 	const char *str4;
 	const char *str5;
 	const char *str6;
-
 	char c;
+
+	printf("Testing strlcat: %i", (int)strlcat(dst, src, ))
 
 	str = "12";
 	str2 = "-12";

@@ -6,7 +6,7 @@
 /*   By: nhariman <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/01 18:52:39 by nhariman       #+#    #+#                */
-/*   Updated: 2019/11/06 17:34:44 by nhariman      ########   odam.nl         */
+/*   Updated: 2019/11/07 21:51:38 by nhariman      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,51 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	char	*source;
-	int		dstend;
-	int		maxappend;
+	size_t		dstend;
+	int			maxappend;
+	int			i;
+	int			dstnull;
 
-	source = (char *)src;
-	dstend = ft_strlen(dst) + 1;
+	dstend = ft_strlen(dst);
 	maxappend = dstsize - ft_strlen(dst) - 1;
-	if (ft_strlen(src) >= dstsize)
-		return (ft_strlen(dst));
-	else if (dstsize == 0)
-		return (0);
-	else if (dstend < maxappend)
+	i = 0;
+	if (dstend > dstsize)
+		dstnull = dst[dstsize] == '\0';
+	else
+		dstnull = dst[dstend] == '\0';
+	if (dstsize != 0 && ft_strlen(dst) <= dstsize)
 	{
-		*dst = dst[dstend];
-		ft_memcpy(dst, src, dstsize);
-		dst[dstsize - 1] = '\0';
+		while (i < maxappend && *src != '\0')
+		{
+			dst[dstend + i] = *src;
+			i++;
+			src++;
+		}
+		dst[dstend + i] = '\0';
 	}
-	return (ft_strlen(dst) + ft_strlen(source));
+	if (!dstnull)
+		return (dstsize + ft_strlen(src));
+	return (dstend - 1 + ft_strlen(src));
 }
+// size_t	ft_strlcat(char *dst, const char *src, size_t size)
+// {
+// 	size_t	j;
+// 	size_t	len;
+// 	int		found_null;
+
+// 	if (size == 0)
+// 		return (ft_strlen(src));
+// 	len = ft_strlen(dst);
+// 	j = 0;
+// 	found_null = dst[len > size ? size : len] != 0;
+// 	while (len + j < size - 1 && src[j])
+// 	{
+// 		dst[len + j] = src[j];
+// 		j++;
+// 	}
+// 	dst[len + j] = 0;
+// 	if (found_null)
+// 		return (ft_strlen(src) + size);
+// 	else
+// 		return (len + ft_strlen(src));
+// }
