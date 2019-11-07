@@ -5,8 +5,8 @@
 /*                                                     +:+                    */
 /*   By: nhariman <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2019/10/31 17:37:44 by nhariman      #+#    #+#                 */
-/*   Updated: 2019/10/31 17:38:48 by nhariman      ########   odam.nl         */
+/*   Created: 2019/10/31 17:37:44 by nhariman       #+#    #+#                */
+/*   Updated: 2019/11/07 17:00:31 by nhariman      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,12 @@ void	ft_putstr(char *str)
 	int	i;
 
 	i = 0;
-	while (str[i] != '\0')
+	if (str)
 	{
-		ft_putchar(str[i]);
-		i++;
+		while (str[i] != '\0')
+		{
+			ft_putchar(str[i]);
+			i++;
+		}
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: nhariman <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/01 18:50:54 by nhariman       #+#    #+#                */
-/*   Updated: 2019/11/06 15:23:12 by nhariman      ########   odam.nl         */
+/*   Updated: 2019/11/07 17:11:54 by nhariman      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,26 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	size_t	i;
-
-	i = 0;
-	if (dstsize < (size_t)ft_strlen(src))
+	if (dst)
 	{
-		ft_memcpy(dst, src, dstsize - 1);
-		dst[dstsize - 1] = '\0';
-		return (ft_strlen(src));
-	}
-	else if (dst && src && ft_strlen(src) <= dstsize)
-	{
-		if ((size_t)ft_strlen(src) < dstsize)
-			ft_memcpy(dst, src, ft_strlen(src) + 1);
-		else if (dstsize != 0)
+		if (dstsize < (size_t)ft_strlen(src) && dstsize != 0)
 		{
 			ft_memcpy(dst, src, dstsize - 1);
-			dst[dstsize] = '\0';
+			dst[dstsize - 1] = '\0';
+			return (ft_strlen(src));
+		}
+		else if (dst && src && ft_strlen(src) <= dstsize)
+		{
+			if ((size_t)ft_strlen(src) < dstsize)
+				ft_memcpy(dst, src, ft_strlen(src) + 1);
+			else if (dstsize != 0)
+			{
+				ft_memcpy(dst, src, dstsize - 1);
+				dst[dstsize] = '\0';
+			}
+			return (ft_strlen(src));
 		}
 		return (ft_strlen(src));
 	}
-	else
-		return (0);
+	return (0);
 }
