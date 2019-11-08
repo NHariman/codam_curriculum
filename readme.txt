@@ -9,11 +9,11 @@ memmove		DONE			YES
 memchr		DONE			YES
 memcmp		DONE			YES
 strlen		DONE			YES
-strlcpy		DONE
-strlcat		DONE
+strlcpy		DONE			YES
+strlcat		DONE			YES
 strchr		DONE			YES
 strrchr		DONE			YES
-strnstr		DONE
+strnstr		DONE			YES
 strncmp		DONE			YES
 atoi		DONE			YES
 isalpha		DONE			YES
