@@ -32,9 +32,9 @@ strdup		DONE			YES
 
 ADDITIONAL FUNCTIONS
 THING				STATUS	TESTED?
-ft_substr
-ft_strjoin
-ft_strtrim
+ft_substr			DONE	YES
+ft_strjoin			DONE	YES
+ft_strtrim			DONE	YES
 ft_split
 ft_itoa
 ft_strmapi
