@@ -6,7 +6,7 @@
 #    By: nhariman <nhariman@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2019/10/31 23:42:48 by nhariman       #+#    #+#                 #
-#    Updated: 2019/11/10 17:35:07 by nhariman      ########   odam.nl          #
+#    Updated: 2019/11/14 16:52:23 by nhariman      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,8 +20,13 @@ ft_memset.c ft_putchar.c ft_putchar_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
 ft_putstr.c ft_putstr_fd.c ft_strlen.c ft_tolower.c ft_toupper.c ft_memcmp.c \
 ft_strdup.c ft_calloc.c ft_strchr.c ft_strrchr.c ft_strnstr.c ft_strlcpy.c \
 ft_strncmp.c ft_strlcat.c ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c \
+ft_itoa.c ft_strmapi.c
+
+CBONUS = ft_lstnew.c
 
 OFILES = $(CFILES:.c=.o)
+
+OBONUS = $(CBONUS:.c=.o)
 
 NAME = libft.a
 
@@ -34,7 +39,7 @@ $(NAME): $(OFILES)
 	$(COMPILE) -c $(FLAGS) -o $@ $<
 
 clean:
-	$(RM) $(OFILES)
+	$(RM) $(OFILES) $(OBONUS)
 
 fclean: clean
 	$(RM) $(NAME)
@@ -42,4 +47,7 @@ fclean: clean
 re: fclean all
 
 lldb: fclean
-	$(COMPILE) -g $(CFILES) main.c -I./
+	$(COMPILE) -g $(CFILES) -I./
+
+bonus: fclean
+	ar rcs $(NAME) $(OFILES) $(OBONUS)

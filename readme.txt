@@ -35,9 +35,9 @@ THING				STATUS	TESTED?
 ft_substr			DONE	YES
 ft_strjoin			DONE	YES
 ft_strtrim			DONE	YES
-ft_split
-ft_itoa
-ft_strmapi
+ft_split			DONE	YES
+ft_itoa				DONE	YES
+ft_strmapi			DONE	YES
 ft_putchar_fd		DONE	YES
 ft_putstr_fd		DONE	YES
 ft_putendl_fd		DONE	YES
