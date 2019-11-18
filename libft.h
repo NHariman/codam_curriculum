@@ -6,7 +6,7 @@
 /*   By: nhariman <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/10/29 16:45:38 by nhariman       #+#    #+#                */
-/*   Updated: 2019/11/14 19:19:56 by nhariman      ########   odam.nl         */
+/*   Updated: 2019/11/18 17:29:22 by nhariman      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+# include "libft_bonus.h"
 
 int		ft_atoi(const char *str);
 int		ft_isalnum(int c);

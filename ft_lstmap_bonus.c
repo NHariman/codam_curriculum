@@ -6,32 +6,28 @@
 /*   By: nhariman <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/18 15:29:14 by nhariman       #+#    #+#                */
-/*   Updated: 2019/11/18 16:10:57 by nhariman      ########   odam.nl         */
+/*   Updated: 2019/11/18 17:28:29 by nhariman      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "libft_bonus.h"
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	int		len;
-	t_list	*newlist;
+	t_list	*head;
 
 	if (!lst)
 		return (NULL);
-	len = ft_lstsize(lst);
-	newlist = (t_list *)malloc(len * sizeof(t_list));
-	if (!newlist)
-		return (NULL);
+	head = NULL;
 	while (lst != NULL)
 	{
-		newlist->content = (*f)(lst->content);
-		newlist = newlist->next;
+		ft_lstadd_back(&head, ft_lstnew((*f)(lst->content)));
+		if (head->content == NULL)
+		{
+			ft_lstclear(&head, (del));
+			return (NULL);
+		}
 		lst = lst->next;
 	}
-	newlist->next = NULL;
-	(del)(lst);
-	free(lst);
-	return (newlist);
+	return (head);
 }

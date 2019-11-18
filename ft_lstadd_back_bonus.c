@@ -6,19 +6,18 @@
 /*   By: nhariman <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/14 20:30:04 by nhariman       #+#    #+#                */
-/*   Updated: 2019/11/14 22:32:34 by nhariman      ########   odam.nl         */
+/*   Updated: 2019/11/18 17:28:46 by nhariman      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "libft_bonus.h"
 
 void	ft_lstadd_back(t_list **alst, t_list *new)
 {
 	t_list	*last;
 
-	ft_lstnew(new);
-	new->next = NULL;
+	if (alst == NULL)
+		return ;
 	if (*alst == NULL)
 	{
 		*alst = new;
