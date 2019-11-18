@@ -6,7 +6,7 @@
 /*   By: nhariman <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/08 13:36:19 by nhariman       #+#    #+#                */
-/*   Updated: 2019/11/14 16:59:46 by nhariman      ########   odam.nl         */
+/*   Updated: 2019/11/18 14:04:56 by nhariman      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,6 @@ static size_t	ft_size(int n)
 static char		*ft_fillnum(int n, char *num, size_t size)
 {
 	size_t	i;
-	int		number;
 
 	i = 1;
 	if (n < 0)
@@ -50,9 +49,8 @@ static char		*ft_fillnum(int n, char *num, size_t size)
 		num[size] = '\0';
 	while (i <= size && n != 0)
 	{
-		number = n;
 		num[size - i] = ((n % 10) + '0');
-		n = number / 10;
+		n = n / 10;
 		i++;
 	}
 	return (num);

@@ -6,7 +6,7 @@
 #    By: nhariman <nhariman@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2019/10/31 23:42:48 by nhariman       #+#    #+#                 #
-#    Updated: 2019/11/15 16:26:41 by nhariman      ########   odam.nl          #
+#    Updated: 2019/11/18 15:52:43 by nhariman      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,8 @@ ft_strncmp.c ft_strlcat.c ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c \
 ft_itoa.c ft_strmapi.c
 
 CBONUS = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c \
-ft_lstlast_bonus.c ft_lstadd_back_bonus.c ft_lstdelone_bonus.c ft_lstiter_bonus.c
+ft_lstlast_bonus.c ft_lstadd_back_bonus.c ft_lstdelone_bonus.c ft_lstiter_bonus.c \
+ft_lstclear_bonus.c ft_lstmap_bonus.c
 
 OFILES = $(CFILES:.c=.o)
 

@@ -1,30 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_lstclear_bonus.c                                :+:    :+:            */
+/*   ft_lstmap_bonus.c                                  :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: nhariman <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2019/11/14 22:36:02 by nhariman       #+#    #+#                */
-/*   Updated: 2019/11/18 15:23:34 by nhariman      ########   odam.nl         */
+/*   Created: 2019/11/18 15:29:14 by nhariman       #+#    #+#                */
+/*   Updated: 2019/11/18 16:10:57 by nhariman      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include "libft_bonus.h"
 
-void	ft_lstclear(t_list **lst, void (*del)(void *))
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	*current;
+	int		len;
+	t_list	*newlist;
 
-	current = *lst;
-	if (current == NULL)
-		return ;
-	while (current != NULL)
+	if (!lst)
+		return (NULL);
+	len = ft_lstsize(lst);
+	newlist = (t_list *)malloc(len * sizeof(t_list));
+	if (!newlist)
+		return (NULL);
+	while (lst != NULL)
 	{
-		(del)(current->content);
-		free(current);
-		current = current->next;
+		newlist->content = (*f)(lst->content);
+		newlist = newlist->next;
+		lst = lst->next;
 	}
-	*lst = NULL;
+	newlist->next = NULL;
+	(del)(lst);
+	free(lst);
+	return (newlist);
 }

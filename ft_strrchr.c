@@ -6,7 +6,7 @@
 /*   By: nhariman <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/01 06:29:51 by nhariman       #+#    #+#                */
-/*   Updated: 2019/11/05 16:55:29 by nhariman      ########   odam.nl         */
+/*   Updated: 2019/11/17 19:03:48 by nhariman      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,5 @@ char	*ft_strrchr(const char *s, int c)
 			i--;
 		}
 	}
-	return (0);
+	return (NULL);
 }
