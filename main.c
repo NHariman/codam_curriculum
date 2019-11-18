@@ -5,17 +5,16 @@
 /*                                                     +:+                    */
 /*   By: nhariman <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2019/10/28 16:39:10 by nhariman       #+#    #+#                */
-/*   Updated: 2019/11/17 15:43:38 by nhariman      ########   odam.nl         */
+/*   Created: 2019/11/18 18:34:48 by nhariman       #+#    #+#                */
+/*   Updated: 2019/11/18 18:36:51 by nhariman      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <assert.h>
 #include "libft.h"
+#include <stdio.h>
 #include <string.h>
 
-int	main(void)
+int		main(void)
 {
 	
 }

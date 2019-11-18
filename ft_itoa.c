@@ -6,14 +6,11 @@
 /*   By: nhariman <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/08 13:36:19 by nhariman       #+#    #+#                */
-/*   Updated: 2019/11/18 14:04:56 by nhariman      ########   odam.nl         */
+/*   Updated: 2019/11/18 19:14:43 by nhariman      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
 
 static size_t	ft_size(int n)
 {
