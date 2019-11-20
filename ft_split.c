@@ -6,7 +6,7 @@
 /*   By: nhariman <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/08 13:36:05 by nhariman       #+#    #+#                */
-/*   Updated: 2019/11/11 18:10:09 by nhariman      ########   odam.nl         */
+/*   Updated: 2019/11/20 16:07:16 by nhariman      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ static int	ft_arraycount(char const *s, char c)
 	{
 		if (s[i] != c)
 		{
-			while (s[i] != c)
+			while (s[i] != c && s[i] != '\0')
 				i++;
 			count++;
 		}
@@ -31,6 +31,16 @@ static int	ft_arraycount(char const *s, char c)
 			i++;
 	}
 	return (count);
+}
+
+static char	**ft_deletearray(char **array, size_t len)
+{
+	while (len >= 0)
+	{
+		free(array[len]);
+		len--;
+	}
+	return (array);
 }
 
 static char	**ft_createarray(char **array, char const *s, char c)
@@ -51,6 +61,8 @@ static char	**ft_createarray(char **array, char const *s, char c)
 				len++;
 			}
 			array[j] = ft_substr(s, i - len, len);
+			if (!array[j])
+				return (ft_deletearray(array, j));
 			j++;
 		}
 		else
@@ -69,5 +81,10 @@ char		**ft_split(char const *s, char c)
 	if (!chararray)
 		return (NULL);
 	chararray = ft_createarray(chararray, s, c);
+	if (!chararray)
+	{
+		free(chararray);
+		return (NULL);
+	}
 	return (chararray);
 }

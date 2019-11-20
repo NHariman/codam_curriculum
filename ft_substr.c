@@ -6,7 +6,7 @@
 /*   By: nhariman <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/08 13:36:49 by nhariman       #+#    #+#                */
-/*   Updated: 2019/11/18 17:41:45 by nhariman      ########   odam.nl         */
+/*   Updated: 2019/11/20 16:01:56 by nhariman      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	if (!s)
 		return (0);
+	if (ft_strlen(s) < (size_t)start)
+		return (ft_strdup(""));
 	substring = (char *)malloc((len + 1) * sizeof(char));
 	i = 0;
 	if (!substring)

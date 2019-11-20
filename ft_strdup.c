@@ -6,7 +6,7 @@
 /*   By: nhariman <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/01 04:44:56 by nhariman       #+#    #+#                */
-/*   Updated: 2019/11/05 19:04:56 by nhariman      ########   odam.nl         */
+/*   Updated: 2019/11/20 16:05:40 by nhariman      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,6 @@ char	*ft_strdup(const char *s1)
 		str[i] = (char)s1[i];
 		i++;
 	}
+	str[i] = '\0';
 	return (str);
 }
