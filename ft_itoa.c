@@ -6,11 +6,12 @@
 /*   By: nhariman <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/08 13:36:19 by nhariman       #+#    #+#                */
-/*   Updated: 2019/11/18 19:14:43 by nhariman      ########   odam.nl         */
+/*   Updated: 2019/11/21 15:14:25 by nhariman      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 static size_t	ft_size(int n)
 {
@@ -32,18 +33,21 @@ static size_t	ft_size(int n)
 
 static char		*ft_fillnum(int n, char *num, size_t size)
 {
-	size_t	i;
+	size_t i;
+	size_t negative;
 
 	i = 1;
+	negative = 0;
 	if (n < 0)
 	{
 		num[0] = '-';
 		n = -n;
-		num[size - i] = '\0';
-		i++;
+		num[size - 1] = '\0';
+		negative = 1;
 	}
 	else
 		num[size] = '\0';
+	i++;
 	while (i <= size && n != 0)
 	{
 		num[size - i] = ((n % 10) + '0');
@@ -60,15 +64,23 @@ char			*ft_itoa(int n)
 
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
+	if (n == 2147483647)
+		return (ft_strdup("2147483647"));
 	if (n == 0)
 		return (ft_strdup("0"));
-	if (n < 0)
-		size = ft_size(n) + 1;
-	else
-		size = ft_size(n);
+	size = ft_size(n) + 1;
 	number = (char *)malloc(size * sizeof(char));
 	if (!number)
 		return (0);
 	number = ft_fillnum(n, number, size);
 	return (number);
+}
+
+int		main(void)
+{
+	int	i;
+
+	i = 693;
+	printf("ft_itoa 693: %s", ft_itoa(i));
+	return (0);
 }
