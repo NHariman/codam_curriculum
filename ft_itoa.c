@@ -6,12 +6,11 @@
 /*   By: nhariman <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/08 13:36:19 by nhariman       #+#    #+#                */
-/*   Updated: 2019/11/21 15:14:25 by nhariman      ########   odam.nl         */
+/*   Updated: 2019/11/21 15:50:34 by nhariman      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static size_t	ft_size(int n)
 {
@@ -42,11 +41,9 @@ static char		*ft_fillnum(int n, char *num, size_t size)
 	{
 		num[0] = '-';
 		n = -n;
-		num[size - 1] = '\0';
 		negative = 1;
 	}
-	else
-		num[size] = '\0';
+	num[size - i] = '\0';
 	i++;
 	while (i <= size && n != 0)
 	{
@@ -74,13 +71,4 @@ char			*ft_itoa(int n)
 		return (0);
 	number = ft_fillnum(n, number, size);
 	return (number);
-}
-
-int		main(void)
-{
-	int	i;
-
-	i = 693;
-	printf("ft_itoa 693: %s", ft_itoa(i));
-	return (0);
 }

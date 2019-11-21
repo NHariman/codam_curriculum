@@ -6,7 +6,7 @@
 /*   By: nhariman <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/01 04:44:56 by nhariman       #+#    #+#                */
-/*   Updated: 2019/11/20 16:05:40 by nhariman      ########   odam.nl         */
+/*   Updated: 2019/11/21 12:07:44 by nhariman      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,13 @@ char	*ft_strdup(const char *s1)
 
 	len = ft_strlen(s1) + 1;
 	i = 0;
-	str = (char *)malloc(len);
+	str = (char *)malloc(len * sizeof(char));
 	if (!str)
 		return (NULL);
 	while (i < len)
 	{
-		str[i] = (char)s1[i];
+		str[i] = s1[i];
 		i++;
 	}
-	str[i] = '\0';
 	return (str);
 }
