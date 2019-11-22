@@ -6,7 +6,7 @@
 /*   By: nhariman <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/08 13:36:57 by nhariman       #+#    #+#                */
-/*   Updated: 2019/11/20 15:57:29 by nhariman      ########   odam.nl         */
+/*   Updated: 2019/11/22 14:04:15 by nhariman      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,12 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		return (0);
 	while (i < ft_strlen(s1))
 	{
-		strduo[i] = (char)s1[i];
+		strduo[i] = s1[i];
 		i++;
 	}
 	while (j < ft_strlen(s2))
 	{
-		strduo[i + j] = (char)s2[j];
+		strduo[i + j] = s2[j];
 		j++;
 	}
 	strduo[i + j] = '\0';

@@ -6,7 +6,7 @@
 /*   By: nhariman <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/01 05:35:14 by nhariman       #+#    #+#                */
-/*   Updated: 2019/11/05 15:54:36 by nhariman      ########   odam.nl         */
+/*   Updated: 2019/11/22 14:02:46 by nhariman      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ char	*ft_strchr(const char *s, int c)
 		if (*str == (char)c)
 			return (str);
 		if (*str == '\0')
-			return (0);
+			return (NULL);
 		str++;
 	}
-	return (0);
+	return (NULL);
 }

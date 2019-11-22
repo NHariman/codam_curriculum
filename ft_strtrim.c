@@ -6,7 +6,7 @@
 /*   By: nhariman <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/08 13:37:06 by nhariman       #+#    #+#                */
-/*   Updated: 2019/11/20 15:38:24 by nhariman      ########   odam.nl         */
+/*   Updated: 2019/11/22 14:05:18 by nhariman      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ char		*ft_strtrim(char const *s1, char const *set)
 		end--;
 	trim = (char *)malloc((end - start + 1) * sizeof(char));
 	if (!trim)
-		return (0);
+		return (NULL);
 	trim = ft_substr(s1, start, end - start);
 	return (trim);
 }

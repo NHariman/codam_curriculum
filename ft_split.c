@@ -6,7 +6,7 @@
 /*   By: nhariman <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/08 13:36:05 by nhariman       #+#    #+#                */
-/*   Updated: 2019/11/21 13:23:14 by nhariman      ########   odam.nl         */
+/*   Updated: 2019/11/22 21:24:06 by nhariman      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ char		**ft_split(char const *s, char c)
 	if (!chararray)
 		return (NULL);
 	chararray = ft_createarray(chararray, s, c);
-	if (!chararray)
+	if (!(*chararray))
 	{
 		free(chararray);
 		return (NULL);

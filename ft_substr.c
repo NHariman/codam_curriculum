@@ -6,7 +6,7 @@
 /*   By: nhariman <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/08 13:36:49 by nhariman       #+#    #+#                */
-/*   Updated: 2019/11/20 16:01:56 by nhariman      ########   odam.nl         */
+/*   Updated: 2019/11/22 14:05:26 by nhariman      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	substring = (char *)malloc((len + 1) * sizeof(char));
 	i = 0;
 	if (!substring)
-		return (0);
+		return (NULL);
 	while (i < len)
 	{
 		substring[i] = (char)s[i + start];

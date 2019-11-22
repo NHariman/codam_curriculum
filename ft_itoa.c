@@ -6,7 +6,7 @@
 /*   By: nhariman <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/08 13:36:19 by nhariman       #+#    #+#                */
-/*   Updated: 2019/11/21 15:50:34 by nhariman      ########   odam.nl         */
+/*   Updated: 2019/11/22 21:20:17 by nhariman      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,17 +33,14 @@ static size_t	ft_size(int n)
 static char		*ft_fillnum(int n, char *num, size_t size)
 {
 	size_t i;
-	size_t negative;
 
-	i = 1;
-	negative = 0;
+	i = 0;
 	if (n < 0)
 	{
 		num[0] = '-';
 		n = -n;
-		negative = 1;
 	}
-	num[size - i] = '\0';
+	num[size] = '\0';
 	i++;
 	while (i <= size && n != 0)
 	{
@@ -61,12 +58,10 @@ char			*ft_itoa(int n)
 
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
-	if (n == 2147483647)
-		return (ft_strdup("2147483647"));
 	if (n == 0)
 		return (ft_strdup("0"));
-	size = ft_size(n) + 1;
-	number = (char *)malloc(size * sizeof(char));
+	size = ft_size(n);
+	number = (char *)malloc((size + 1) * sizeof(char));
 	if (!number)
 		return (0);
 	number = ft_fillnum(n, number, size);
