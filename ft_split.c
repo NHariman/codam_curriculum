@@ -6,7 +6,7 @@
 /*   By: nhariman <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/08 13:36:05 by nhariman       #+#    #+#                */
-/*   Updated: 2019/11/22 21:24:06 by nhariman      ########   odam.nl         */
+/*   Updated: 2019/11/24 15:30:19 by nhariman      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,8 @@ static char	**ft_deletearray(char **array, size_t len)
 		free(array[len]);
 		len--;
 	}
-	return (array);
+	free(array);
+	return (NULL);
 }
 
 static char	**ft_createarray(char **array, char const *s, char c)
@@ -73,18 +74,15 @@ static char	**ft_createarray(char **array, char const *s, char c)
 
 char		**ft_split(char const *s, char c)
 {
-	char		**chararray;
+	char		**split;
 
 	if (!s)
 		return (NULL);
-	chararray = (char **)malloc((ft_arraycount(s, c) + 1) * sizeof(char *));
-	if (!chararray)
+	split = (char **)malloc((ft_arraycount(s, c) + 1) * sizeof(char *));
+	if (!split)
 		return (NULL);
-	chararray = ft_createarray(chararray, s, c);
-	if (!(*chararray))
-	{
-		free(chararray);
+	split = ft_createarray(split, s, c);
+	if (!split)
 		return (NULL);
-	}
-	return (chararray);
+	return (split);
 }
