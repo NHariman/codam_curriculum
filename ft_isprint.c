@@ -6,7 +6,7 @@
 /*   By: nhariman <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/10/28 18:26:21 by nhariman       #+#    #+#                */
-/*   Updated: 2019/11/18 19:14:33 by nhariman      ########   odam.nl         */
+/*   Updated: 2019/11/24 17:25:33 by nhariman      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,5 @@ int	ft_isprint(int c)
 {
 	if (c >= ' ' && c <= '~')
 		return (1);
-	else
-		return (0);
+	return (0);
 }
