@@ -6,7 +6,7 @@
 /*   By: nhariman <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/08 13:37:06 by nhariman       #+#    #+#                */
-/*   Updated: 2019/11/22 14:05:18 by nhariman      ########   odam.nl         */
+/*   Updated: 2019/11/25 22:02:39 by nhariman      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char		*ft_strtrim(char const *s1, char const *set)
 		return (0);
 	start = 0;
 	end = ft_strlen(s1);
-	if (!set)
+	if (set == '\0')
 		return ((char *)s1);
 	while (ft_strchr(set, s1[start]) && s1[start] != '\0')
 		start++;

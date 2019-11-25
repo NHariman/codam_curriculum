@@ -6,7 +6,7 @@
 /*   By: nhariman <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/10/31 21:11:03 by nhariman       #+#    #+#                */
-/*   Updated: 2019/11/22 14:06:07 by nhariman      ########   odam.nl         */
+/*   Updated: 2019/11/25 18:58:31 by nhariman      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,18 +21,14 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 	destination = (unsigned char *)dst;
 	source = (unsigned char *)src;
 	i = 0;
-	while (i < n)
+	while (n)
 	{
-		if (*source == (unsigned char)c)
-		{
-			*destination = *source;
-			destination++;
-			return (destination);
-		}
 		*destination = *source;
+		if (*source == (unsigned char)c)
+			return (destination + 1);
 		destination++;
 		source++;
-		i++;
+		n--;
 	}
 	return (NULL);
 }

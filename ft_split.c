@@ -6,7 +6,7 @@
 /*   By: nhariman <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/08 13:36:05 by nhariman       #+#    #+#                */
-/*   Updated: 2019/11/24 17:21:51 by nhariman      ########   odam.nl         */
+/*   Updated: 2019/11/25 22:17:39 by nhariman      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,5 @@ char		**ft_split(char const *s, char c)
 	if (!split)
 		return (NULL);
 	split = ft_createarray(split, s, c);
-	if (!split)
-		return (NULL);
 	return (split);
 }
