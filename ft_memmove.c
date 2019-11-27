@@ -6,7 +6,7 @@
 /*   By: nhariman <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/10/31 21:40:49 by nhariman       #+#    #+#                */
-/*   Updated: 2019/11/25 22:18:30 by nhariman      ########   odam.nl         */
+/*   Updated: 2019/11/27 20:28:38 by nhariman      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	i = 0;
 	if ((!dst && !src))
 		return (NULL);
-	if ((size_t)dest - (size_t)src < len)
+	if (((size_t)(dest - source)) < len)
 		while (i < len)
 		{
 			i++;
