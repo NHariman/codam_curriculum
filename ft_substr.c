@@ -6,7 +6,7 @@
 /*   By: nhariman <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/08 13:36:49 by nhariman       #+#    #+#                */
-/*   Updated: 2019/11/27 19:32:22 by nhariman      ########   odam.nl         */
+/*   Updated: 2019/11/28 14:07:38 by nhariman      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (ft_strlen(s) < (size_t)start)
 		return (ft_strdup(""));
 	length = ft_strlen(s) - start;
-	if ((ft_strlen(s) - start) < len)
+	if (length < len)
 		substring = (char *)malloc((length + 1) * sizeof(char));
 	else
 		substring = (char *)malloc((len + 1) * sizeof(char));
