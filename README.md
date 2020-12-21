@@ -8,9 +8,8 @@
   <p>To compile the library with the linked list functions use:<br><code>make bonus</code></p>
   <p>The library will be created under the name <code>libft.a</code>. And can be compiled with C mains and other projects using:<br>
     <code>gcc -Wall -Werror -Wextra main.c -L. -lft</code> OR <code>gcc -Wall -Werror -Wextra main.c libft.a</code></p>
-  <h3>Overview</h3>
+  <h2>Summary</h2>
 <p>This project is a recreation of the stdlib C library along with some extra functions for string and array manipulation, linked list usage and fd reading and writing.</p>
-<p></p>
 <h3>Overview of the functions in this library</h3>
 <div align="center"><h4>Char content checkers</h4></div>
 <table style="width:100%">
