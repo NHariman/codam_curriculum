@@ -1,8 +1,13 @@
 <html>
 <body>
 <h1>Codam Coding College Project: Libft</h1>
-<b>A recreation of some functions in the stdlib C library along with extra functions created by NHariman for their time at Codam Coding College.</b>
-<p></p>
+<p><b>A recreation of some functions in the stdlib C library along with extra functions created by NHariman for their time at Codam Coding College.</b></p>
+  <h2>Using the library</h2>
+  <p>Clone the project:<br><code>git clone [repo_link] [folder]</code></p>
+  <p>Create the library by entering in the terminal/iterm:<br><code>make</code></p>
+  <p>To compile the library with the linked list functions use:<br><code>make bonus</code></p>
+  <p>The library will be created under the name <code>libft.a</code>. And can be compiled with C mains and other projects using:<br>
+    <code>gcc -Wall -Werror -Wextra main.c -L. -lft</code> OR <code>gcc -Wall -Werror -Wextra main.c libft.a</code></p>
 <p>This project is a recreation of the stdlib C library along with some extra functions for string and array manipulation, linked list usage and fd reading and writing.</p>
 <p></p>
 <h3>Overview of the functions in this library</h3>
