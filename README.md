@@ -1,6 +1,6 @@
 <html>
 <body>
-<h1>Codam Project: Libft</h1>
+<h1>Codam Coding College Project: Libft</h1>
 <b>A recreation of some functions in the stdlib C library along with extra functions created by NHariman for their time at Codam Coding College.</b>
 <p></p>
 <p>This project is a recreation of the stdlib C library along with some extra functions for string and array manipulation, linked list usage and fd reading and writing.</p>
