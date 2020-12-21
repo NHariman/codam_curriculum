@@ -330,6 +330,42 @@
   </tr>
 </table>
 
+<div align="center"><h4>printf's putchar and putstr.</h4></div>
+<table style="width:100%">
+  <tr>
+    <th>Function Name</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>void pft_putchar_fd(char c, int fd, int *count)</td>
+    <td>outputs a particular char to file descriptor fd and counts one to the return of printf.</td>
+  </tr>
+  <tr>
+    <td>void pft_putstr_fd(char *s, int fd, int *count)</td>
+    <td>outputs a particular string to file descriptor fd and counts the len of the printed string to the return of printf.</td>
+  </tr>
+</table>
+
+<div align="center"><h4>Printfs (printf/printf_err/dprintf)</h4></div>
+<table style="width:100%">
+  <tr>
+    <th>Function Name</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>int ft_printf(const char *format, ...)</td>
+    <td>The functions in the printf() family produce output according to a format as described below. The function printf() write output to stdout, the standard output stream</td>
+  </tr>
+  <tr>
+    <td>int ft_dprintf(int fd, const char *format, ...)</td>
+    <td>The functions in the printf() family produce output according to a format as described below. The function dprintf() write output to a particular fd.</td>
+  </tr>
+  <tr>
+    <td>int ft_printf_err(const char *format, ...)</td>
+    <td>The functions in the printf() family produce output according to a format as described below. The function dprintf() write output to the standard errror (stderr).</td>
+  </tr>
+</table>
+
 <div align="center"><h4>Misc functions</h4></div>
 <table style="width:100%">
   <tr>
