@@ -5,8 +5,8 @@
 /*                                                     +:+                    */
 /*   By: nhariman <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2019/10/31 21:11:03 by nhariman       #+#    #+#                */
-/*   Updated: 2019/11/25 18:58:31 by nhariman      ########   odam.nl         */
+/*   Created: 2019/10/31 21:11:03 by nhariman      #+#    #+#                 */
+/*   Updated: 2020/06/10 18:54:11 by nhariman      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,9 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
 	unsigned char	*destination;
 	unsigned char	*source;
-	size_t			i;
 
 	destination = (unsigned char *)dst;
 	source = (unsigned char *)src;
-	i = 0;
 	while (n)
 	{
 		*destination = *source;

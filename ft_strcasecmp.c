@@ -1,21 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_lstadd_front_bonus.c                            :+:    :+:            */
+/*   ft_strcasecmp.c                                    :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: nhariman <marvin@codam.nl>                   +#+                     */
+/*   By: nhariman <nhariman@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2019/11/14 20:30:04 by nhariman       #+#    #+#                */
-/*   Updated: 2019/11/20 12:16:54 by nhariman      ########   odam.nl         */
+/*   Created: 2020/11/17 15:46:02 by nhariman      #+#    #+#                 */
+/*   Updated: 2020/11/17 16:58:16 by nhariman      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_front(t_list **alst, t_list *new)
+int			ft_strcasecmp(char *s1, char *s2)
 {
-	if (alst == NULL)
-		return ;
-	new->next = *alst;
-	*alst = new;
+	char	*str1;
+	char	*str2;
+	int		ret;
+
+	str1 = ft_strlower(s1);
+	str2 = ft_strlower(s2);
+	ret = ft_strcmp(str1, str2);
+	free(str1);
+	free(str2);
+	return (ret);
 }

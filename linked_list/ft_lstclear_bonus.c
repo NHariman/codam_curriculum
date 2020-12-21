@@ -1,28 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_lstsize_bonus.c                                 :+:    :+:            */
+/*   ft_lstclear_bonus.c                                :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: nhariman <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2019/11/14 21:25:48 by nhariman       #+#    #+#                */
-/*   Updated: 2019/11/18 19:12:30 by nhariman      ########   odam.nl         */
+/*   Created: 2019/11/14 22:36:02 by nhariman      #+#    #+#                 */
+/*   Updated: 2020/12/21 18:22:16 by nhariman      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
-int	ft_lstsize(t_list *lst)
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	int		len;
 	t_list	*current;
+	t_list	*temp;
 
-	len = 0;
-	current = lst;
+	current = *lst;
+	if (current == NULL)
+		return ;
 	while (current != NULL)
 	{
-		len++;
-		current = current->next;
+		temp = current->next;
+		(*del)(current->content);
+		free(current);
+		current = temp;
 	}
-	return (len);
+	*lst = NULL;
 }

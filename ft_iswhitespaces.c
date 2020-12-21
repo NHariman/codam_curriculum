@@ -1,25 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_lstnew_bonus.c                                  :+:    :+:            */
+/*   ft_iswhitespaces.c                                 :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: nhariman <marvin@codam.nl>                   +#+                     */
+/*   By: nhariman <nhariman@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2019/11/14 17:07:25 by nhariman       #+#    #+#                */
-/*   Updated: 2019/11/27 20:10:30 by nhariman      ########   odam.nl         */
+/*   Created: 2020/07/16 19:36:55 by nhariman      #+#    #+#                 */
+/*   Updated: 2020/07/16 19:37:08 by nhariman      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+long	ft_iswhitespaces(const char *str)
 {
-	t_list	*newnode;
+	long	i;
 
-	newnode = (t_list *)malloc(sizeof(t_list));
-	if (!newnode)
-		return (NULL);
-	newnode->content = content;
-	newnode->next = NULL;
-	return (newnode);
+	i = 0;
+	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n' ||
+	str[i] == '\v' || str[i] == '\f' || str[i] == '\r')
+		i++;
+	return (i);
 }

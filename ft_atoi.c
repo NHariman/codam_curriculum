@@ -5,23 +5,12 @@
 /*                                                     +:+                    */
 /*   By: nhariman <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2019/10/28 15:55:47 by nhariman       #+#    #+#                */
-/*   Updated: 2019/11/27 23:15:22 by nhariman      ########   odam.nl         */
+/*   Created: 2019/10/28 15:55:47 by nhariman      #+#    #+#                 */
+/*   Updated: 2020/07/18 00:07:48 by nhariman      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static long	ft_iswhitespaces(const char *str)
-{
-	long	i;
-
-	i = 0;
-	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n' ||
-	str[i] == '\v' || str[i] == '\f' || str[i] == '\r')
-		i++;
-	return (i);
-}
 
 int			ft_atoi(const char *str)
 {
@@ -38,7 +27,7 @@ int			ft_atoi(const char *str)
 			negative = -1;
 		i++;
 	}
-	while (str[i] >= '0' && str[i] <= '9' && str[i] != '\0')
+	while (ft_isdigit(str[i]) && str[i] != '\0')
 	{
 		number = (number * 10) + (str[i] - '0');
 		i++;

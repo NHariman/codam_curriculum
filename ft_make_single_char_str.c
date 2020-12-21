@@ -1,31 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_lstclear_bonus.c                                :+:    :+:            */
+/*   ft_make_single_char_str.c                          :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: nhariman <marvin@codam.nl>                   +#+                     */
+/*   By: nhariman <nhariman@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2019/11/14 22:36:02 by nhariman       #+#    #+#                */
-/*   Updated: 2019/11/27 20:12:35 by nhariman      ########   odam.nl         */
+/*   Created: 2020/12/21 18:31:04 by nhariman      #+#    #+#                 */
+/*   Updated: 2020/12/21 19:29:39 by nhariman      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstclear(t_list **lst, void (*del)(void *))
+char	*ft_make_single_char_str(char c)
 {
-	t_list	*current;
-	t_list	*temp;
+	char *num;
 
-	current = *lst;
-	if (current == NULL)
-		return ;
-	while (current != NULL)
-	{
-		temp = current->next;
-		(*del)(current->content);
-		free(current);
-		current = temp;
-	}
-	*lst = NULL;
+	num = (char *)malloc(sizeof(char) * 2);
+	if (!num)
+		return (NULL);
+	num[0] = c;
+	num[1] = '\0';
+	return (num);
 }

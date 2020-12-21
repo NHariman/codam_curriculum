@@ -1,22 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_lstlast_bonus.c                                 :+:    :+:            */
+/*   ft_free_array.c                                    :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: nhariman <marvin@codam.nl>                   +#+                     */
+/*   By: nhariman <nhariman@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2019/11/14 21:57:15 by nhariman       #+#    #+#                */
-/*   Updated: 2019/11/18 17:28:35 by nhariman      ########   odam.nl         */
+/*   Created: 2020/12/21 18:39:28 by nhariman      #+#    #+#                 */
+/*   Updated: 2020/12/21 18:39:37 by nhariman      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
-t_list	*ft_lstlast(t_list *lst)
+void	ft_free_array(char **arr, int len)
 {
-	if (lst == NULL)
-		return (NULL);
-	while (lst->next != NULL)
-		lst = lst->next;
-	return (lst);
+	int i;
+
+	i = 0;
+	while (i < len)
+	{
+		free(arr[i]);
+		i++;
+	}
+	free(arr);
+	arr = NULL;
 }
