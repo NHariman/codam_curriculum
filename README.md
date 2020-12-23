@@ -67,7 +67,7 @@
   </tr>
 </table>
 
-<div align="center"><h4>fd functions</h4></div>
+<div align="center"><h4>file descriptor functions</h4></div>
 <table style="width:100%">
   <tr>
     <th>Function Name</th>
@@ -75,15 +75,15 @@
   </tr>
   <tr>
     <td>void ft_putchar_fd(char c, int fd)</td>
-    <td>Writes a character c to the fd specified in fd</td>
+    <td>Writes a character c to the file descriptor specified in fd</td>
   </tr>
   <tr>
     <td>void ft_putstr_fd(char *s, int fd)</td>
-    <td>Writes a char string to the fd specified in fd</td>
+    <td>Writes a char string to the file descriptor specified in fd</td>
   </tr>
   <tr>
     <td>void ft_putendl_fd(char *s, int fd)</td>
-    <td>writes a char string to the fd specified in fd,<br>with a newline at the end.</td>
+    <td>writes a char string to the file descriptor specified in fd,<br>with a newline at the end.</td>
   </tr>
   <tr>
     <td>void ft_putnbr_fd(int n, int fd)</td>
@@ -299,7 +299,7 @@
   </tr>
   <tr>
     <td>t_list *ft_lstnew(void *content)</td>
-    <td>Allocates (with malloc(3)) and returns a new element.  The variable ’content’ is initialized with the value of the parameter ’content’. The variable ’next’ is initialized to NULL.</td>
+    <td>Allocates with malloc and returns a new element.  The variable ’content’ is initialized with the value of the parameter ’content’. The variable ’next’ is initialized to NULL.</td>
   </tr>
   <tr>
     <td>void ft_lstadd_front(t_list **lst, t_list *new)</td>
