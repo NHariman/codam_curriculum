@@ -6,7 +6,7 @@
 /*   By: nhariman <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/10/29 16:45:38 by nhariman      #+#    #+#                 */
-/*   Updated: 2021/02/12 18:27:02 by nhariman      ########   odam.nl         */
+/*   Updated: 2021/02/12 19:00:02 by nhariman      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,13 @@
 ** get next line struct
 */
 
-typedef struct	s_gnl
+typedef struct		s_gnl
 {
 	int				bytes_read;
 	int				fd;
 	char			*line_read;
 	int				newline;
-}				t_gnl;
+}					t_gnl;
 
 /*
 ** linked list
@@ -151,7 +151,6 @@ char				*ft_strjointwo(char *s1, char *s2);
 char				*ft_charjoin(char *str, char c);
 char				*ft_make_single_char_str(char c);
 
-
 /*
 ** array changing functions
 */
@@ -236,7 +235,8 @@ void				ft_print_hex(const char c, unsigned long nb, int *count);
 void				ft_print_decimal(unsigned long n, int *count);
 void				ft_dprint_hex(const char c, unsigned long nb, int *count,
 					t_dflag *flags);
-void				ft_dprint_decimal(unsigned long n, int *count, t_dflag *flags);
+void				ft_dprint_decimal(
+						unsigned long n, int *count, t_dflag *flags);
 
 /*
 ** these functions handle the 0 padding or ' ' padding if needed

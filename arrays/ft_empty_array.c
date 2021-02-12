@@ -6,12 +6,11 @@
 /*   By: nhariman <nhariman@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/21 19:10:49 by nhariman      #+#    #+#                 */
-/*   Updated: 2020/12/21 19:11:03 by nhariman      ########   odam.nl         */
+/*   Updated: 2021/02/12 19:03:11 by nhariman      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
-
 
 char			**empty_array(char *cmd)
 {

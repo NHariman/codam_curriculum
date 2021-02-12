@@ -6,7 +6,7 @@
 /*   By: nhariman <nhariman@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/31 17:14:10 by nhariman      #+#    #+#                 */
-/*   Updated: 2021/02/12 18:19:10 by nhariman      ########   odam.nl         */
+/*   Updated: 2021/02/12 19:00:34 by nhariman      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ static int				find_newline(char *str)
 	}
 	return (-1);
 }
+
 static char				*read_line(t_gnl gnl)
 {
 	char		buf[1000 + 1];

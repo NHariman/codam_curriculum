@@ -6,7 +6,7 @@
 /*   By: nhariman <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/02/13 12:22:05 by nhariman      #+#    #+#                 */
-/*   Updated: 2020/12/21 18:20:58 by nhariman      ########   odam.nl         */
+/*   Updated: 2021/02/12 19:03:55 by nhariman      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,8 @@ static void			ft_reset_dflags(t_dflag *flags, int fd)
 	flags->fd = fd;
 }
 
-static void			ft_dvprintf(int fd, const char *format, va_list argp, int *count)
+static void			ft_dvprintf(int fd, const char *format,
+						va_list argp, int *count)
 {
 	int			i;
 	t_dflag		flags;

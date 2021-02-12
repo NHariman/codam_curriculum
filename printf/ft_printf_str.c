@@ -6,13 +6,13 @@
 /*   By: nhariman <nhariman@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/02/24 17:31:04 by nhariman      #+#    #+#                 */
-/*   Updated: 2021/02/12 18:29:22 by nhariman      ########   odam.nl         */
+/*   Updated: 2021/02/12 19:02:35 by nhariman      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-void		pft_putchar_fd(char c, int fd, int *count)
+void			pft_putchar_fd(char c, int fd, int *count)
 {
 	ssize_t output;
 
@@ -24,7 +24,7 @@ void		pft_putchar_fd(char c, int fd, int *count)
 		*count = -1;
 }
 
-void		pft_putstr_fd(char *s, int fd, int *count)
+void			pft_putstr_fd(char *s, int fd, int *count)
 {
 	int		length;
 	ssize_t	output;
@@ -41,7 +41,7 @@ void		pft_putstr_fd(char *s, int fd, int *count)
 	}
 }
 
-void		ft_print_char(const char c, int *count, t_flag *flags)
+void			ft_print_char(const char c, int *count, t_flag *flags)
 {
 	if (!flags->dash && !flags->zero)
 		ft_pad(flags->pad - 1, count);
@@ -60,6 +60,7 @@ void		ft_print_char(const char c, int *count, t_flag *flags)
 ** but (null) is printed because
 ** that's what the real printf does.
 */
+
 static size_t	set_strlen(t_flag *flags, char *str)
 {
 	if ((size_t)flags->pre < ft_strlen(str))
@@ -68,7 +69,7 @@ static size_t	set_strlen(t_flag *flags, char *str)
 		return (ft_strlen(str));
 }
 
-void		ft_print_str(const char *str, int *count, t_flag *flags)
+void			ft_print_str(const char *str, int *count, t_flag *flags)
 {
 	size_t		i;
 	size_t		strlen;
