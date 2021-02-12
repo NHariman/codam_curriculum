@@ -6,11 +6,19 @@
 /*   By: nhariman <nhariman@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/02/24 17:31:14 by nhariman      #+#    #+#                 */
-/*   Updated: 2020/12/21 18:20:46 by nhariman      ########   odam.nl         */
+/*   Updated: 2021/02/12 18:04:47 by nhariman      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
+
+static void		ft_print_x(int nb, const char c, int *count, t_dflag *flags)
+{
+	if (c == 'X')
+		pft_putchar_fd(nb + 55, flags->fd, count);
+	else
+		pft_putchar_fd(nb + 87, flags->fd, count);
+}
 
 void			ft_dprint_hex(const char c, unsigned long nb, int *count,
 				t_dflag *flags)
@@ -19,8 +27,7 @@ void			ft_dprint_hex(const char c, unsigned long nb, int *count,
 		return ;
 	if (nb >= 10 && nb < 16)
 	{
-		c == 'X' ? pft_putchar_fd(nb + 55, flags->fd, count) :
-						pft_putchar_fd(nb + 87, flags->fd, count);
+		ft_print_x(nb, c, count, flags);
 		if (*count < 0)
 			return ;
 		*count = *count + 1;

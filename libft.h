@@ -6,7 +6,7 @@
 /*   By: nhariman <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/10/29 16:45:38 by nhariman      #+#    #+#                 */
-/*   Updated: 2020/12/21 19:21:47 by nhariman      ########   odam.nl         */
+/*   Updated: 2021/02/12 18:27:02 by nhariman      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,6 +94,9 @@ void				ft_putchar_fd(char c, int fd);
 void				ft_putstr_fd(char *s, int fd);
 void				ft_putendl_fd(char *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
+void				gnl_fill_line(t_gnl gnl, char *tmp);
+int					ret_fill_line(int newline, size_t remainder);
+int					ret_gnl(int newline, char *leftover, int ret);
 int					get_next_line(int fd, char **line);
 
 /*

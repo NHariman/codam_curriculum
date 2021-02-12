@@ -6,7 +6,7 @@
 /*   By: nhariman <nhariman@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/31 17:14:10 by nhariman      #+#    #+#                 */
-/*   Updated: 2020/12/21 18:32:22 by nhariman      ########   odam.nl         */
+/*   Updated: 2021/02/12 18:19:10 by nhariman      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ static char				*read_line(t_gnl gnl)
 		else
 		{
 			tmp = gnl_strjoin(gnl.line_read, buf);
-			gnl.line_read = (!tmp ? NULL : ft_strdup(tmp));
+			gnl_fill_line(gnl, tmp);
 			free(tmp);
 		}
 		if (!gnl.line_read)
@@ -74,7 +74,7 @@ static int				fill_line(t_gnl gnl, char **line)
 		*line = ft_strdup(gnl.line_read);
 	if (!*line)
 		return (-1);
-	return (newline != -1 && remainder ? 1 : 0);
+	return (ret_fill_line(newline, remainder));
 }
 
 static char				*fill_leftover(char *str)
@@ -120,5 +120,5 @@ int						get_next_line(int fd, char **line)
 	if (gnl.newline != -1)
 		leftover = fill_leftover(gnl.line_read);
 	free(gnl.line_read);
-	return ((gnl.newline != -1 && !leftover) ? -1 : ret);
+	return (ret_gnl(gnl.newline, leftover, ret));
 }
